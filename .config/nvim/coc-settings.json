@@ -1,0 +1,6 @@
+"languageserver": {
+    "slint": {
+        "filetypes": ["slint"],
+        "command": "slint-lsp"
+    }
+}
