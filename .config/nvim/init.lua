@@ -140,7 +140,6 @@ require('lazy').setup({
   require 'my_telescope.init',
   require 'my_oil',
   { 'kevinhwang91/promise-async' },
-  require 'my_ufo',
   require 'color_scheme',
   require 'my_harpoon.init',
   require 'my_lazydev',
@@ -155,15 +154,6 @@ require('lazy').setup({
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  {
-    'nvim-flutter/flutter-tools.nvim',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'stevearc/dressing.nvim', -- optional for vim.ui.select
-    },
-    config = true,
-  },
   require 'my_nvim-ts-autotag',
   require 'my_dotnet',
   -- {
@@ -179,11 +169,13 @@ require('lazy').setup({
   -- },
   require 'my_mini',
   require 'my_treesitter',
-  'seblyng/roslyn.nvim',
-  ---@module 'roslyn.config'
-  ---@type RoslynNvimConfig
-  opts = {
-    -- your configuration comes here; leave empty for default settings
+  {
+    'seblyng/roslyn.nvim',
+    ---@module 'roslyn.config'
+    ---@type RoslynNvimConfig
+    opts = {
+      -- your configuration comes here; leave empty for default settings
+    },
   },
 }, {
   ui = {

@@ -245,13 +245,6 @@ return {
       html = {},
       roslyn = {},
     }
-    local navic = require 'nvim-navic'
-    vim.lsp.config('roslyn', {
-      on_attach = function(client, bufnr)
-        print 'This will run when the server attaches!'
-        navic.attach(client, bufnr)
-      end,
-    })
 
     for name, server in pairs(servers) do
       server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
