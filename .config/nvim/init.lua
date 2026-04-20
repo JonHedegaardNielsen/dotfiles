@@ -37,7 +37,6 @@ rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 --
-vim.cmd 'autocmd BufEnter *.slint :setlocal filetype=slint'
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
@@ -72,8 +71,6 @@ require('lazy').setup({
   -- See `:help gitsigns` to understand what the configuration keys do
   require 'my_gitsigns',
   require 'my_copilot',
-  -- lazy.nvim
-  { 'slint-ui/vim-slint' },
   require 'my_trouble',
   {
     'hrsh7th/nvim-cmp',
@@ -163,7 +160,6 @@ require('lazy').setup({
     config = true,
   },
   require 'my_nvim-ts-autotag',
-  require 'my_navic',
   require 'my_dotnet',
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
@@ -176,7 +172,6 @@ require('lazy').setup({
   --   end
   --
   -- },
-  require 'my_treesj',
   require 'my_mini',
   require 'my_treesitter',
   'seblyng/roslyn.nvim',
