@@ -13,6 +13,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd('ModeChanged', {
+  command = 'LuaSnipUnlinkCurrent',
+  desc = "Close code snippet editing after insert mode exit, so <Tab> won't unexpectedly jump back to it",
+  pattern = 'i:*',
+})
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'

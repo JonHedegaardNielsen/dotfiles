@@ -40,7 +40,6 @@ return function()
   vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
   vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
   vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
-  vim.keymap.set('n', '<leader>of', vim.diagnostic.open_float)
 
   vim.keymap.set('x', '<leader>p', '"_dp')
   vim.keymap.set('n', '<leader>y', '"+y')
@@ -48,6 +47,8 @@ return function()
   vim.keymap.set('n', '<leader>y', '"+Y')
   vim.keymap.set('n', '<leader>d', '"_d')
   vim.keymap.set('v', '<leader>d', '"_d')
+
+  vim.keymap.set('n', '<leader>of', vim.diagnostic.open_float)
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
   -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
