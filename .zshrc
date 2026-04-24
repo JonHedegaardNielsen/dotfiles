@@ -15,7 +15,7 @@ zinit ice depth=1; zinit light starship/starship
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-
+zinit ice depth=1;zinit light jeffreytse/zsh-vi-mode
 
 # Enable command auto-completion features
 autoload -U compinit && compinit
@@ -23,8 +23,8 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # bindkey '^y' autosuggest-accept
-bindkey '^n' history-search-forward
-bindkey '^p' history-search-backward
+# bindkey '^n' history-search-forward
+# bindkey '^p' history-search-backward
 
 # History
 HISTSIZE=5000
