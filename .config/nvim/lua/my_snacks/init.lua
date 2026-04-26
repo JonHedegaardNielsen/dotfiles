@@ -17,39 +17,12 @@ return {
       },
     },
     input = { enabled = true },
-    picker = { enabled = true, layout = 'ivy' },
+    picker = { enabled = false },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = false },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-  },
-  keys = {
-    {
-      '<leader>sf',
-      function()
-        Snacks.picker.files()
-      end,
-      desc = 'Search Files',
-    },
-    {
-      '<Leader>sg',
-      function()
-        Snacks.picker.grep()
-      end,
-    },
-    {
-      '<leader>sb',
-      function()
-        Snacks.picker.buffer()
-      end,
-    },
-    {
-      '<leader>git',
-      function()
-        Snacks.lazygit()
-      end,
-    },
   },
 }
