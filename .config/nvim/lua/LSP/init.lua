@@ -237,7 +237,7 @@ return {
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       bashls = {
         settings = {
-          filetypes = { 'sh', 'zsh' },
+          filetypes = { 'sh', 'zsh', '.zshrc', 'bashrc' },
         },
       },
       ts_ls = {},
