@@ -1,6 +1,5 @@
 eval "$(starship init zsh)"
-
-
+export GTK_IM_MODULE=simple ghostty
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then

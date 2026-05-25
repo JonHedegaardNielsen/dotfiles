@@ -12,7 +12,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
-
 vim.api.nvim_create_autocmd('ModeChanged', {
   command = 'LuaSnipUnlinkCurrent',
   desc = "Close code snippet editing after insert mode exit, so <Tab> won't unexpectedly jump back to it",
@@ -76,7 +75,7 @@ require('lazy').setup({
   --
   -- See `:help gitsigns` to understand what the configuration keys do
   require 'my_gitsigns',
-  require 'my_copilot',
+  -- require 'my_copilot',
   require 'my_trouble',
   {
     'hrsh7th/nvim-cmp',
@@ -132,6 +131,7 @@ require('lazy').setup({
 
   require 'my_which-key',
   require 'my_lualine',
+  require 'my_supermavem',
   -- NOTE: Plugins can specify dependencies.
   --
   -- The dependencies are proper plugin specifications as well - anything

@@ -1,7 +1,6 @@
 # Dynamic theme colors
-config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
-
 # Font
+theme = "Kanagawa Wave"
 font-family = "JetBrainsMono Nerd Font"
 font-style = Regular
 font-size = 9
@@ -21,6 +20,10 @@ gtk-toolbar-style = flat
 # Cursor styling
 cursor-style = "block"
 cursor-style-blink = false
+keybind = ~=unbind
+keybind = shift+=unbind
+
+font-feature = -calt
 
 # Cursor styling + SSH session terminfo
 # (all shell integration options must be passed together)
