@@ -22,7 +22,7 @@ format = '\[[$symbol($version(-$name))]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
-format = '\[[⏱ $duration]($style)\]'
+format = ''
 
 [cobol]
 format = '\[[$symbol($version)]($style)\]'
@@ -259,7 +259,7 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$workspace]($style)\]'
 
 [time]
-format = '\[[$time]($style)\]'
+format = ''
 
 [typst]
 format = '\[[$symbol($version)]($style)\]'

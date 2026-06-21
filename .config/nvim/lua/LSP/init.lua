@@ -23,7 +23,6 @@ return {
         'github:Crashdummyy/mason-registry',
       },
     }
-    require('lspconfig').slint_lsp.setup {}
     -- LSP is an initialism you've probably heard, but might not understand what it is.
     --
     -- LSP stands for Language Server Protocol. It's a protocol that helps editors

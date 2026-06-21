@@ -3,7 +3,7 @@ return function()
   vim.g.maplocalleader = ' '
   vim.wo.relativenumber = true
   -- Set to true if you have a Nerd Font installed and selected in the terminal
-  vim.g.have_nerd_font = false
+  vim.g.have_nerd_font = true
   -- [[ Setting options ]]
   -- See `:help vim.o`
   -- NOTE: You can change these options as you wish!
@@ -26,6 +26,11 @@ return function()
   vim.o.foldlevel = 100
   vim.o.foldlevelstart = 100
   vim.o.foldenable = true
+
+  -- Disable swap and backup files
+  vim.o.swapfile = false
+  vim.o.backup = false
+
   -- Sync clipboard between OS and Neovim.
   --  Schedule the setting after `UiEnter` because it can increase startup-time.
   --  Remove this option if you want your OS clipboard to remain independent.
