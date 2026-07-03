@@ -10,12 +10,7 @@ return {
     bigfile = { enabled = true },
     dashboard = { enabled = false },
     explorer = { enabled = false },
-    indent = {
-      enabled = false,
-      animate = {
-        enabled = false,
-      },
-    },
+    indent = { enabled = false },
     input = { enabled = true },
     picker = { enabled = false },
     notifier = { enabled = true },
@@ -24,5 +19,6 @@ return {
     scroll = { enabled = false },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    image = { enabled = true },
   },
 }
