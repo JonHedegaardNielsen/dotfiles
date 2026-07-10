@@ -1,10 +1,15 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
-vim.keymap.set('n', '<leader>M', function()
-  require('treesj').toggle { split = { recursive = false } }
-end)
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
+vim.keymap.set('n', '<leader>;', function()
+  local win = vim.api.nvim_get_current_win()
+  local pos = vim.api.nvim_win_get_cursor(win)
+  vim.print(pos)
+  vim.api.nvim_input 'A;<ESC>'
+  vim.schedule(function()
+    vim.api.nvim_win_set_cursor(win, pos)
+  end)
+end)
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>')
 vim.keymap.set('n', '<leader>bp', '<cmd>bprev<CR>')

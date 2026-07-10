@@ -16,6 +16,7 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
+  require 'my_barbecue',
   require 'my_guess-indent',
   require 'my_neo_tree',
   require 'my_gitsigns',
