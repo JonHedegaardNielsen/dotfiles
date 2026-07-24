@@ -5,8 +5,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
-
-vim.api.nvim_create_autocmd('BufEnter', {
-  pattern = '*.fish',
-  command = 'lsp enable fish_lsp',
-})

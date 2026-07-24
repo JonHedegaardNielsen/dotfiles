@@ -3,7 +3,6 @@ return { -- Highlight, edit, and navigate code
   build = ':TSUpdate',
   main = 'nvim-treesitter', -- Sets main module to use for opts
   branch = 'main',
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   config = function()
     local parsers = {
       'gdscript',

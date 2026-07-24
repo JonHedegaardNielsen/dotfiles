@@ -41,22 +41,26 @@ return { -- Collection of various small independent plugins/modules
     MiniPairs.map('i', "<M-'>", { action = 'closeopen', pair = "''", neigh_pattern = '[^%a\\].' })
     MiniPairs.map('i', '<M-`>', { action = 'closeopen', pair = '``', neigh_pattern = '[^\\].' }) -- Now map Alt+key to trigger the pair behavior
 
-    -- Simple and easy statusline.
-    --  You could remove this setup call if you don't like it,
-    --  and try some other statusline plugin
-    local statusline = require 'mini.statusline'
-    -- set use_icons to true if you have a Nerd Font
-    statusline.setup { use_icons = vim.g.have_nerd_font }
+    require('mini.move').setup {
+      mappings = {
+        -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
+        left = 'H',
+        right = 'L',
+        down = 'J',
+        up = 'K',
 
-    -- You can configure sections in the statusline by overriding their
-    -- default behavior. For example, here we set the section for
-    -- cursor location to LINE:COLUMN
-    ---@diagnostic disable-next-line: duplicate-set-field
-    statusline.section_location = function()
-      return '%2l:%-2v'
-    end
+        -- Move current line in Normal mode
+        line_left = '',
+        line_right = '',
+        line_down = '',
+        line_up = '',
+      },
 
-    -- ... and there is more!
-    --  Check out: https://github.com/echasnovski/mini.nvim
+      -- Options which control moving behavior
+      options = {
+        -- Automatically reindent selection during linewise vertical move
+        reindent_linewise = true,
+      },
+    }
   end,
 }

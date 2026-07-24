@@ -22,27 +22,6 @@ return { -- fuzzy finder (files, lsp, etc)
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
   },
   config = function()
-    -- telescope is a fuzzy finder that comes with a lot of different things that
-    -- it can fuzzy find! it's more than just a "file finder", it can search
-    -- many different aspects of neovim, your workspace, lsp, and more!
-    --
-    -- the easiest way to use telescope, is to start by doing something like:
-    --  :telescope help_tags
-    --
-    -- after running this command, a window will open up and you're able to
-    -- type in the prompt window. you'll see a list of `help_tags` options and
-    -- a corresponding preview of the help.
-    --
-    -- two important keymaps to use while in telescope are:
-    --  - insert mode: <c-/>
-    --  - normal mode: ?
-    --
-    -- this opens a window that shows you all of the keymaps for the current
-    -- telescope picker. this is really useful to discover what telescope can
-    -- do as well as how to actually do it!
-
-    -- [[ configure telescope ]]
-    -- see `:help telescope` and `:help telescope.setup()`
     require('telescope').setup {
       -- you can put your default mappings / updates / etc. in here
       --  all the info you're looking for is in `:help telescope.setup()`

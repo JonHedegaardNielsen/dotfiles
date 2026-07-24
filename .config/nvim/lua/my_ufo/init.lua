@@ -15,7 +15,7 @@ return {
         capabilities = capabilities,
         -- you can add other fields for setting up lsp server in this table
       }
-      require('lspconfig').qmlls.setup {}
+      -- require('lspconfig').qmlls.setup {}
     end
     require('ufo').setup()
   end,
