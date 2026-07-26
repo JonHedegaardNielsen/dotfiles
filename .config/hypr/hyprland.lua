@@ -1,4 +1,3 @@
-//
 require("autostart")
 require("appearance")
 require("variables")
