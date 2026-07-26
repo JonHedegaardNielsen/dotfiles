@@ -1,0 +1,6 @@
+//
+require("autostart")
+require("appearance")
+require("variables")
+require("bindings")
+pcall(require, "monitors")
