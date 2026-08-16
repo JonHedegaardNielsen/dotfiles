@@ -4,7 +4,7 @@ require("bindings.focus_bindings")
 require("bindings.move_bindings")
 require("bindings.sound")
 
-require("bindings.noctalia")
+-- require("bindings.noctalia")
 require("bindings.sizing_bindings")
 hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
 hl.bind("SUPER + T", hl.dsp.window.float({ action = "toggle" }))
