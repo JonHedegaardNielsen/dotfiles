@@ -1,10 +1,10 @@
 local obj = {
 	terminal = "GTK_IM_MODULE=simple ghostty",
-	browser = "chromium",
+	browser = "brave-origin",
 	app_launcher = "rofi -show drun",
 	sound_control = "pavucontrol",
 	lock_screen = "hyprlock",
-	incog_browser = "chromium --incognito",
+	incog_browser = "brave-origin --incognito",
 	file_browser = "nautilus",
 	noctalia_msg = "noctalia msg ",
 }

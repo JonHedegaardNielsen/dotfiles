@@ -16,6 +16,7 @@ return {
   },
   config = function()
     -- Brief aside: **What is LSP?**
+    require('lspconfig').qmlls.setup {}
     require('mason').setup {
       registries = {
         'github:mason-org/mason-registry',
@@ -196,6 +197,7 @@ return {
       svelte = {},
       roslyn = { filetypes = { 'cs', 'csx', 'razor' } },
       fish_lsp = { filetypes = { 'fish' } },
+      qmlls = { filetypes = { 'qml' } },
     }
 
     vim.api.nvim_create_autocmd('BufEnter', {
