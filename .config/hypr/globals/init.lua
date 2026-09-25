@@ -1,7 +1,7 @@
 local obj = {
 	terminal = "GTK_IM_MODULE=simple ghostty",
 	browser = "brave-origin",
-	app_launcher = "rofi -show drun",
+	app_launcher = "qs ipc call launcher toggle",
 	sound_control = "pavucontrol",
 	lock_screen = "hyprlock",
 	incog_browser = "brave-origin --incognito",

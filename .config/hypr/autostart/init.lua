@@ -4,6 +4,7 @@ local autoruns = {
 	"hyprpaper",
 	"hypridle",
 	"systemctl --user start hyprpolkitagent",
+	"qs",
 }
 
 hl.on("hyprland.start", function()

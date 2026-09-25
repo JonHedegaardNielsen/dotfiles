@@ -5,7 +5,8 @@ hl.animation({ leaf = "windowsOut", enabled = true, speed = 20, bezier = "quick"
 hl.animation({ leaf = "workspaces", enabled = false })
 hl.animation({ leaf = "windowsMove", enabled = true, speed = 4, bezier = "quick" })
 
-hl.layer_rule({ match = { namespace = "rofi" }, no_anim = true })
+hl.layer_rule({ match = { namespace = "qs" }, no_anim = true })
+hl.layer_rule({ match = { namespace = "quickshell" }, no_anim = true })
 
 hl.workspace_rule({ workspace = "5", layout = "scrolling" })
 hl.workspace_rule({ workspace = "6", layout = "scrolling" })

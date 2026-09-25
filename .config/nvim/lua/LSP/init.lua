@@ -16,7 +16,7 @@ return {
   },
   config = function()
     -- Brief aside: **What is LSP?**
-    require('lspconfig').qmlls.setup {}
+    -- require('lspconfig').qmlls.setup {}
     require('mason').setup {
       registries = {
         'github:mason-org/mason-registry',

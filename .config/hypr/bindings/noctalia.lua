@@ -1,3 +1,7 @@
 local cmd = require("globals").noctalia_msg
 
-hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd(cmd .. "panel-toggle control-center"))
+hl.bind(
+	"SUPER + ALT + SPACE",
+	hl.dsp.exec_cmd(cmd .. "panel-toggle control-center"),
+	{ description = "toggle control center" }
+)

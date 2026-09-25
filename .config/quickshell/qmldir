@@ -1,0 +1,3 @@
+singleton Theme 1.0 theme.qml
+AppLauncher 1.0 AppLauncher.qml
+NotificationCenter 1.0 NotificationCenter.qml
