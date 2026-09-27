@@ -24,6 +24,15 @@ hl.bind("SUPER + SHIFT + F", hl.dsp.exec_cmd(globals.file_browser), { descriptio
 hl.bind("SUPER + ALT + B", launch_tui("btop"), { description = "launch btop" })
 hl.bind("SUPER + ALT + F", launch_tui("yazi"), { description = "launch yazi" })
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"), { description = "copy color to clipboard" })
-
-hl.bind("SUPER + ALT + C", hl.dsp.exec_cmd("qs ipc call launcher openClipboard"), { description = "open clipboard" })
-hl.bind("SUPER + ALT + K", hl.dsp.exec_cmd("qs ipc call launcher openKeybinds"), { description = "open keybind search" })
+hl.bind(
+	"SUPER + ALT + C",
+	hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"),
+	{ description = "open clipboard" }
+)
+hl.bind(
+	"SUPER + ALT + K",
+	hl.dsp.exec_cmd(
+		[[hyprctl binds -j | jq -r '.[] | "\(.modmask) \(.key) — \(.description)"' | rofi -dmenu -display-columns 4]]
+	),
+	{ description = "open keybind search" }
+)
