@@ -16,17 +16,34 @@
 #network,
 #clock,
 #bluetooth,
+#tray,
 #power {
     padding: 0px 20px;
     border: @border solid;
     border-width: 1px;
 }
 
+#tray menu {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid @border;
+    border-radius: 10px;
+}
+
+#tray menuitem {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#tray menuitem:hover {
+    background-color: rgba(59, 131, 247, 0.3);
+}
+
 #pulseaudio {
     border-radius: 10px 0 0 10px;
 }
 
-#bluetooth {
+#tray {
     border-radius: 0px 10px 10px 0;
 }
 
