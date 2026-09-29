@@ -7,7 +7,7 @@
 		"clock",
 		"network",
 		"bluetooth",
-		"tray"
+		"tray",
 	],
 	"network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -20,7 +20,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "on-click": "ghostty -e impala"
   },
   "pulseaudio": {
     "format": "{icon}   {volume}%",
@@ -48,8 +48,6 @@
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
-    "on-click": "omarchy-menu power",
-    "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
     "states": {
       "warning": 20,
       "critical": 10
@@ -62,12 +60,15 @@
     "format-connected": "󰂱",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "omarchy-launch-bluetooth"
   },
 	"tray": {
 		"icon-size": 22,
 		"spacing": 10,
 		"show-passive-icons": false
+	},
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip-format": "<big>{:%A, %B %d}</big>",
 	},
 	/*-------------
 	    Options

@@ -9,8 +9,6 @@
     font-size: 16px;
 }
 
-#waybar {}
-
 #pulseaudio,
 #battery,
 #network,
@@ -19,14 +17,22 @@
 #tray,
 #power {
     padding: 0px 20px;
+}
+
+#battery,
+#network,
+#clock,
+#bluetooth,
+#tray,
+#power {
+    padding: 0px 20px;
     border: @border solid;
-    border-width: 1px;
+    border-width: 0px 0px 0px 1px;
 }
 
 #tray menu {
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.9);
-    border: 1px solid @border;
     border-radius: 10px;
 }
 
@@ -39,21 +45,25 @@
     background-color: rgba(59, 131, 247, 0.3);
 }
 
-#pulseaudio {
-    border-radius: 10px 0 0 10px;
-}
-
-#tray {
-    border-radius: 0px 10px 10px 0;
-}
-
 .modules-right {
     padding-left: 10px;
     border-radius: 0 0 0 10px;
 }
 
 .modules-center {
-    margin: 5px 0px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 5rem;
+    border: 1px solid @border;
+    margin-top: 2px;
+    padding: 1px 0px;
+    margin-bottom: 2px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px 10px;
+}
+
+tooltip {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid @border;
+    border-radius: 10px;
+    padding: 5px;
 }
