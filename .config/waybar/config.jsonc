@@ -4,7 +4,7 @@
 	"modules-center": [
 		"pulseaudio",
 		"battery",
-		"clock",
+    "custom/time",
 		"network",
 		"bluetooth",
 		"tray",
@@ -66,10 +66,16 @@
 		"spacing": 10,
 		"show-passive-icons": false
 	},
-	"clock": {
-		"format": "{:%H:%M}",
-		"tooltip-format": "<big>{:%A, %B %d}</big>",
-	},
+	  "custom/time" :{
+    "exec" : "~/.config/waybar/scripts/time.sh",
+    "format": "{text}",
+    "interval": 2,
+    "return-type": "json",
+},
+	// "scripts/time.sh": {
+	// 	"format": "{:%H:%M}",
+	// 	"tooltip-format": "<big>{:%A, %B %d}</big>",
+	// },
 	/*-------------
 	    Options
 	-------------*/
