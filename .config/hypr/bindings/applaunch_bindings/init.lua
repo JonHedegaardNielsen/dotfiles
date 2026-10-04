@@ -7,6 +7,8 @@ end
 hl.bind("SUPER + W", hl.dsp.window.close(), { description = "close window" })
 hl.bind("SUPER + CTRL + W", hl.dsp.window.kill(), { description = "kill window" })
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(globals.app_launcher), { description = "open app launcher" })
+hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(globals.emoji_picker), { description = "open emoji picker" })
+hl.bind("SUPER + CTRL + SPACE", hl.dsp.window.set_prop({ prop = "opacity", value = "1" }))
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(globals.terminal), { description = "open terminal" })
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(globals.browser), { description = "open browser" })
 hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd(globals.incog_browser), { description = "open incognito browser" })
@@ -26,13 +28,11 @@ hl.bind("SUPER + ALT + F", launch_tui("yazi"), { description = "launch yazi" })
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"), { description = "copy color to clipboard" })
 hl.bind(
 	"SUPER + ALT + C",
-	hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"),
+	hl.dsp.exec_cmd("cliphist list | rofi -p clipboard -dmenu -display-columns 2 | cliphist decode | wl-copy"),
 	{ description = "open clipboard" }
 )
 hl.bind(
 	"SUPER + ALT + K",
-	hl.dsp.exec_cmd(
-		[[hyprctl binds -j | jq -r '.[] | "\(.modmask) \(.key) — \(.description)"' | rofi -dmenu -display-columns 4]]
-	),
+	hl.dsp.exec_cmd("~/.config/hypr/scripts/binds-rofi.sh"),
 	{ description = "open keybind search" }
 )
