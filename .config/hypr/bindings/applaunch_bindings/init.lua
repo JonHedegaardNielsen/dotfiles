@@ -36,3 +36,5 @@ hl.bind(
 	hl.dsp.exec_cmd("~/.config/hypr/scripts/binds-rofi.sh"),
 	{ description = "open keybind search" }
 )
+
+hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("~/dotfiles/scripts/open_project.sh"), { description = "open project" })
