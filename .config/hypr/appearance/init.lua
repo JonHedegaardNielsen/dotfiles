@@ -6,7 +6,8 @@ hl.animation({ leaf = "workspaces", enabled = false })
 hl.animation({ leaf = "windowsMove", enabled = true, speed = 4, bezier = "quick" })
 
 hl.layer_rule({ match = { namespace = "qs" }, no_anim = true })
-hl.layer_rule({ match = { namespace = "rofi" }, no_anim = true })
+hl.layer_rule({ match = { namespace = "launcher" }, no_anim = true }) -- fuzzel
+hl.layer_rule({ match = { namespace = "rofi" }, no_anim = true }) -- emoji picker
 
 hl.workspace_rule({ workspace = "5", layout = "scrolling" })
 hl.workspace_rule({ workspace = "6", layout = "scrolling" })

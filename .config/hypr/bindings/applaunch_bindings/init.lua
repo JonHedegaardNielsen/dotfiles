@@ -28,12 +28,12 @@ hl.bind("SUPER + ALT + F", launch_tui("yazi"), { description = "launch yazi" })
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"), { description = "copy color to clipboard" })
 hl.bind(
 	"SUPER + ALT + C",
-	hl.dsp.exec_cmd("cliphist list | rofi -p clipboard -dmenu -display-columns 2 | cliphist decode | wl-copy"),
+	hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu --with-nth=2 --prompt='clipboard: ' | cliphist decode | wl-copy"),
 	{ description = "open clipboard" }
 )
 hl.bind(
 	"SUPER + ALT + K",
-	hl.dsp.exec_cmd("~/.config/hypr/scripts/binds-rofi.sh"),
+	hl.dsp.exec_cmd("~/.config/hypr/scripts/binds-fuzzel.sh"),
 	{ description = "open keybind search" }
 )
 
