@@ -7,7 +7,7 @@ end
 hl.bind("SUPER + W", hl.dsp.window.close(), { description = "close window" })
 hl.bind("SUPER + CTRL + W", hl.dsp.window.kill(), { description = "kill window" })
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(globals.app_launcher), { description = "open app launcher" })
-hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(globals.emoji_picker), { description = "open emoji picker" })
+hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd("~/dotfiles/scripts/emoji.sh"), { description = "open emoji picker" })
 hl.bind("SUPER + CTRL + SPACE", hl.dsp.window.set_prop({ prop = "opacity", value = "1" }))
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(globals.terminal), { description = "open terminal" })
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(globals.browser), { description = "open browser" })

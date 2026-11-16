@@ -2,7 +2,7 @@ local obj = {
 	terminal = "GTK_IM_MODULE=simple ghostty",
 	browser = "brave-origin",
 	app_launcher = "fuzzel",
-	emoji_picker = "$SCRIPTS/emoji.sh",
+	emoji_picker = "fish -c $SCRIPTS/emoji.sh",
 	sound_control = "pavucontrol",
 	lock_screen = "hyprlock",
 	incog_browser = "brave-origin --incognito",
