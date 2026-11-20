@@ -1,5 +1,5 @@
 local obj = {
-	terminal = "GTK_IM_MODULE=simple ghostty",
+	terminal = "alacritty",
 	browser = "brave-origin",
 	app_launcher = "fuzzel",
 	emoji_picker = "fish -c $SCRIPTS/emoji.sh",

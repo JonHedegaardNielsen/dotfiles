@@ -198,6 +198,7 @@ return {
       roslyn = { filetypes = { 'cs', 'csx', 'razor' } },
       fish_lsp = { filetypes = { 'fish' } },
       qmlls = { filetypes = { 'qml' } },
+      lua_ls = {},
     }
 
     vim.api.nvim_create_autocmd('BufEnter', {

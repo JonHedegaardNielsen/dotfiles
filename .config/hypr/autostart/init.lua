@@ -1,7 +1,7 @@
 local autoruns = {
 	"wl-paste --type text --watch cliphist store",
 	"wl-paste --type image --watch cliphist store",
-	"hyprpaper",
+	"swaybg -i ~/dotfiles/wallpaper/1.jpg",
 	"hypridle",
 	"systemctl --user start hyprpolkitagent",
 	"waybar",
